@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="appkevin.MainPage"
+             Title="Comida">
+
+    <!-- Contenedor principal -->
+    <VerticalStackLayout>
+        <!-- Contenido principal con Scroll -->
+        <ScrollView>
+            <VerticalStackLayout Padding="10" Spacing="15">
+
+                <!-- Encabezado -->
+                <Border BackgroundColor="LightGreen" StrokeShape="RoundRectangle 10">
+                    <Grid Padding="10">
+                        <Label Text="🍴 Comida" FontSize="20" FontAttributes="Bold" TextColor="White" />
+                        <ImageButton Source="profile_icon.png" HorizontalOptions="End" />
+                    </Grid>
+                </Border>
+
+                <!-- Sección Restaurantes -->
+                <Label Text="Restaurantes" FontSize="18" FontAttributes="Bold" />
+
+                <Border BackgroundColor="LightGreen" StrokeShape="RoundRectangle 10" Padding="10" Margin="0,5">
+                    <HorizontalStackLayout>
+                        <Image Source="bistro_image.png" WidthRequest="50" HeightRequest="50" Margin="0,0,10,0" />
+                        <VerticalStackLayout>
+                            <Label Text="Bistro italiano de" FontSize="16" FontAttributes="Bold" />
+                            <Label Text="Auténtica cocina italiana" FontSize="14" />
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Border BackgroundColor="LightGreen" StrokeShape="RoundRectangle 10" Padding="10" Margin="0,5">
+                    <HorizontalStackLayout>
+                        <Image Source="sushi_image.png" WidthRequest="50" HeightRequest="50" Margin="0,0,10,0" />
+                        <VerticalStackLayout>
+                            <Label Text="Sushi Sakura" FontSize="16" FontAttributes="Bold" />
+                            <Label Text="Sushi y sashimi frescos" FontSize="14" />
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Border>
+
+                <!-- Buscar platos -->
+                <Entry Placeholder="Buscar platos..." Margin="0,10" />
+
+                <!-- Platos populares -->
+                <Label Text="Platos populares" FontSize="18" FontAttributes="Bold" />
+
+                <Border Padding="10" StrokeShape="RoundRectangle 10" Margin="0,5">
+                    <HorizontalStackLayout>
+                        <Image Source="pizza_image.png" WidthRequest="50" HeightRequest="50" Margin="0,0,10,0" />
+                        <VerticalStackLayout>
+                            <Label Text="Pizza de pepperoni" FontSize="16" FontAttributes="Bold" />
+                            <Label Text="Una deliciosa mezcla con pepperoni y queso mozzarella." FontSize="14" />
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Border Padding="10" StrokeShape="RoundRectangle 10" Margin="0,5">
+                    <HorizontalStackLayout>
+                        <Image Source="salad_image.png" WidthRequest="50" HeightRequest="50" Margin="0,0,10,0" />
+                        <VerticalStackLayout>
+                            <Label Text="VerdeEnsaladad" FontSize="16" FontAttributes="Bold" />
+                            <Label Text="Una mezcla fresca de verduras y aguacate." FontSize="14" />
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Border>
+
+                <Border Padding="10" StrokeShape="RoundRectangle 10" Margin="0,5">
+                    <HorizontalStackLayout>
+                        <Image Source="curry_image.png" WidthRequest="50" HeightRequest="50" Margin="0,0,10,0" />
+                        <VerticalStackLayout>
+                            <Label Text="PolloCurry" FontSize="16" FontAttributes="Bold" />
+                            <Label Text="Curry con trozos de pollo sabrosos." FontSize="14" />
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </Border>
+            </VerticalStackLayout>
+        </ScrollView>
+
+        <!-- Barra inferior -->
+        <Grid BackgroundColor="Blue" Padding="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ImageButton Source="home_icon.png" Grid.Column="0" />
+            <ImageButton Source="favorite_icon.png" Grid.Column="1" />
+            <ImageButton Source="cart_icon.png" Grid.Column="2" />
+            <ImageButton Source="settings_icon.png" Grid.Column="3" />
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
